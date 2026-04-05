@@ -1,15 +1,19 @@
-# username.github.io
+# j-p-courneya.github.io
 
-This is the personal academic profile starter kit that accompanies the HSHSL workshop **Using GitHub.com to Manage your Scholarly Work**.
+Personal academic profile site for [Jean-Paul Courneya](https://j-p-courneya.github.io) — Bioinformationist at the Health Sciences & Human Services Library, University of Maryland, Baltimore.
 
-To use this repository:
+Built with [Astro](https://astro.build) and deployed to GitHub Pages via GitHub Actions.
 
-1. Fork it
-2. Change the repository name from `username.github.io` to `(YOUR GITHUB USER NAME).github.io` in the repository's `settings` menu.
-3. Add your personal details by appropriately editing the options in the `_config.yml` file.
+## Local development
 
-After completing the above steps you can point your browser to https://(YOUR GITHUB USERNAME).github.io to see your new academic profile page!
+```bash
+npm install
+npm run dev      # http://localhost:4321
+npm run build    # build to dist/
+```
 
-Remember to change the contents of this `README.md` file to explain to GitHub visitors that this is your academic profile web page and not a workshop starter kit.
+## Updating content
 
-**Happy GitHubbing!**
+All profile data (name, bio, links) is in [`src/pages/index.astro`](src/pages/index.astro) at the top of the file in the `profile` object.
+
+To add a profile photo, drop a file named `avatar.jpg` into the `public/` folder and commit it.
