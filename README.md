@@ -1,19 +1,9 @@
-# j-p-courneya.github.io
+# Jean-Paul Courneya
 
-Personal academic profile site for [Jean-Paul Courneya](https://j-p-courneya.github.io) — Bioinformationist at the Health Sciences & Human Services Library, University of Maryland, Baltimore.
+**Bioinformationist** · Health Sciences & Human Services Library, University of Maryland, Baltimore
 
-Built with [Astro](https://astro.build) and deployed to GitHub Pages via GitHub Actions.
+I provide research support in bioinformatics, computational biology, and data science. My work helps researchers design reproducible workflows, navigate genomic data resources, and apply modern analytical tools to biomedical questions — bridging library science and life science at every step.
 
-## Local development
-
-```bash
-npm install
-npm run dev      # http://localhost:4321
-npm run build    # build to dist/
-```
-
-## Updating content
-
-All profile data (name, bio, links) is in [`src/pages/index.astro`](src/pages/index.astro) at the top of the file in the `profile` object.
-
-To add a profile photo, drop a file named `avatar.jpg` into the `public/` folder and commit it.
+- 🌐 [j-p-courneya.github.io](https://j-p-courneya.github.io)
+- 📬 [jcourneya@hshsl.umaryland.edu](mailto:jcourneya@hshsl.umaryland.edu)
+- [Google Scholar](https://share.google/SJgdEvhAVGnKd6ZpD) · [ORCID](https://orcid.org/0000-0001-9014-649X) · [LinkedIn](https://www.linkedin.com/in/jean-paul-courneya-65721715)
