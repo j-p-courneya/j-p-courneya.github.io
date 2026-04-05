@@ -1,15 +1,9 @@
-# username.github.io
+# Jean-Paul Courneya
 
-This is the personal academic profile starter kit that accompanies the HSHSL workshop **Using GitHub.com to Manage your Scholarly Work**.
+**Bioinformationist** · Health Sciences & Human Services Library, University of Maryland, Baltimore
 
-To use this repository:
+I provide research support in bioinformatics, computational biology, and data science. My work helps researchers design reproducible workflows, navigate genomic data resources, and apply modern analytical tools to biomedical questions — bridging library science and life science at every step.
 
-1. Fork it
-2. Change the repository name from `username.github.io` to `(YOUR GITHUB USER NAME).github.io` in the repository's `settings` menu.
-3. Add your personal details by appropriately editing the options in the `_config.yml` file.
-
-After completing the above steps you can point your browser to https://(YOUR GITHUB USERNAME).github.io to see your new academic profile page!
-
-Remember to change the contents of this `README.md` file to explain to GitHub visitors that this is your academic profile web page and not a workshop starter kit.
-
-**Happy GitHubbing!**
+- 🌐 [j-p-courneya.github.io](https://j-p-courneya.github.io)
+- 📬 [jcourneya@hshsl.umaryland.edu](mailto:jcourneya@hshsl.umaryland.edu)
+- [Google Scholar](https://share.google/SJgdEvhAVGnKd6ZpD) · [ORCID](https://orcid.org/0000-0001-9014-649X) · [LinkedIn](https://www.linkedin.com/in/jean-paul-courneya-65721715)
