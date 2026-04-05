@@ -1,0 +1,31 @@
+---
+import '../styles/global.css';
+
+const profile = {
+  name: 'J-P Courneya',
+  email: 'jcourneya@hshsl.umaryland.edu',
+  jobTitle: 'Bioinformationist',
+  institution: 'University of Maryland HS/HSL',
+  githubUsername: 'j-p-courneya',
+};
+---
+
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{profile.name}</title>
+    <meta name="description" content={`${profile.name} — ${profile.jobTitle} at ${profile.institution}`} />
+  </head>
+  <body>
+    <main>
+      <h1>{profile.name}</h1>
+      <p class="subtitle">{profile.jobTitle}, {profile.institution}</p>
+      <div class="actions">
+        <a href={`mailto:${profile.email}`} class="btn">Email</a>
+        <a href={`https://github.com/${profile.githubUsername}`} class="btn" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </main>
+  </body>
+</html>
