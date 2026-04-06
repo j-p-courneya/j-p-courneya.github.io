@@ -1,0 +1,34 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const allNotes = await getCollection('notes', ({ data }) => !data.draft);
+const notes = allNotes.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+
+function formatDate(date: Date) {
+  return date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+}
+---
+
+<BaseLayout title="Notes to File — J-P Courneya" description="Notes on bioinformatics, pipelines, research, and how the work actually gets done.">
+  <main class="notes-page">
+    <div class="notes-header">
+      <a href="/" class="back-link">← Back</a>
+      <h1>Notes to File</h1>
+      <p class="notes-subtitle">Notes on bioinformatics, pipelines, research, and how the work actually gets done.</p>
+    </div>
+
+    <ul class="note-list">
+      {notes.map((note) => (
+        <li>
+          <a href={`/notes/${note.slug}`} class="note-card">
+            <div class="note-card-meta">{formatDate(note.data.date)}</div>
+            <div class="note-card-title">{note.data.title}</div>
+            <div class="note-card-desc">{note.data.description}</div>
+            <div class="note-card-read">Read →</div>
+          </a>
+        </li>
+      ))}
+    </ul>
+  </main>
+</BaseLayout>
