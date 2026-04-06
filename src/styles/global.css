@@ -9,9 +9,9 @@ html, body {
 }
 
 body {
-  font-family: 'Inter', system-ui, sans-serif;
-  background: #f5f5f2;
-  color: #1a1a1a;
+  font-family: 'DM Sans', system-ui, sans-serif;
+  background: #100f0d;
+  color: #ede9e0;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -23,30 +23,31 @@ main {
   padding: 3rem 1.5rem;
 }
 
-/* Card */
-.card {
-  display: flex;
-  gap: 3.5rem;
-  max-width: 860px;
+/* Profile card */
+.profile {
+  max-width: 560px;
   width: 100%;
-  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0;
 }
 
-/* Photo column */
-.col-photo {
-  flex-shrink: 0;
-}
-
+/* Avatar */
 .avatar {
   position: relative;
-  width: 160px;
-  height: 160px;
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
   overflow: hidden;
-  background: #ddd;
+  background: #2a2722;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 2rem;
+  outline: 1px solid #3a3530;
+  outline-offset: 3px;
 }
 
 .avatar img {
@@ -58,47 +59,52 @@ main {
 }
 
 .avatar-initials {
-  font-size: 1.8rem;
-  font-weight: 600;
-  color: #888;
-  letter-spacing: 0.02em;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #7a7065;
 }
 
-/* Content column */
-.col-content {
-  flex: 1;
-  min-width: 0;
+/* Identity */
+.identity {
+  margin-bottom: 1.75rem;
 }
 
 h1 {
-  margin: 0 0 0.25rem;
-  font-size: clamp(1.8rem, 4vw, 2.4rem);
-  font-weight: 600;
-  letter-spacing: -0.02em;
-  color: #111;
+  margin: 0 0 0.5rem;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(2rem, 5vw, 2.8rem);
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  color: #f0ebe0;
   line-height: 1.1;
 }
 
-.title {
-  margin: 0 0 0.2rem;
-  font-size: 1rem;
+.role {
+  margin: 0 0 0.35rem;
+  font-size: 0.85rem;
   font-weight: 500;
-  color: #1d4ed8;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #c4714f;
 }
 
 .institution {
-  margin: 0 0 1.5rem;
-  font-size: 0.9rem;
-  font-weight: 400;
-  color: #555;
+  margin: 0;
+  font-size: 0.88rem;
+  font-weight: 300;
+  color: #7a7065;
+  letter-spacing: 0.01em;
 }
 
+/* Bio */
 .bio {
-  margin: 0 0 2rem;
+  margin: 0 0 2.25rem;
   font-size: 0.95rem;
-  line-height: 1.75;
-  color: #333;
+  line-height: 1.8;
   font-weight: 300;
+  color: #b8b0a4;
+  padding: 0 0.5rem;
 }
 
 /* Links */
@@ -106,57 +112,41 @@ h1 {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
+  justify-content: center;
 }
 
 .link {
   display: inline-flex;
   align-items: center;
-  gap: 0.35rem;
-  padding: 0.4rem 0.85rem;
-  border: 1px solid #d1d5db;
-  border-radius: 6px;
-  background: white;
-  color: #374151;
+  gap: 0.4rem;
+  padding: 0.45rem 1rem;
+  border: 1px solid #2e2b27;
+  border-radius: 100px;
+  background: transparent;
+  color: #9e9a93;
   text-decoration: none;
+  font-family: 'DM Sans', sans-serif;
   font-size: 0.82rem;
-  font-weight: 500;
-  transition: border-color 0.15s, color 0.15s, background 0.15s;
+  font-weight: 400;
+  transition: border-color 0.2s, color 0.2s, background 0.2s;
 }
 
 .link:hover {
-  border-color: #1d4ed8;
-  color: #1d4ed8;
-  background: #eff6ff;
+  border-color: #c4714f;
+  color: #c4714f;
+  background: rgba(196, 113, 79, 0.06);
 }
 
 .link-icon {
-  width: 14px;
-  height: 14px;
+  width: 13px;
+  height: 13px;
   display: flex;
   align-items: center;
   flex-shrink: 0;
+  opacity: 0.75;
 }
 
 .link-icon svg {
   width: 100%;
   height: 100%;
-}
-
-/* Mobile */
-@media (max-width: 600px) {
-  .card {
-    flex-direction: column;
-    align-items: center;
-    gap: 2rem;
-    text-align: center;
-  }
-
-  .links {
-    justify-content: center;
-  }
-
-  .avatar {
-    width: 120px;
-    height: 120px;
-  }
 }
