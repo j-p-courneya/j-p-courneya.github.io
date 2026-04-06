@@ -72,7 +72,8 @@ All profile data is in the `profile` object at the top of `src/pages/index.astro
 | `displayName` | Name shown in the hero and browser tab |
 | `jobTitle` | Title line under your name |
 | `institution` | First institution line (Center for Vaccine Development) |
-| `university` | Second institution line (University of Maryland, Baltimore) |
+| `school` | Second institution line (School of Medicine) |
+| `university` | Third institution line (University of Maryland, Baltimore) |
 | `email` | Contact email |
 | `bio` | Paragraph text in the About section |
 | `links` | Array of icon links (Email, GitHub, Scholar, ORCID, LinkedIn) |
