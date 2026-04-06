@@ -217,6 +217,12 @@ h1 {
   color: var(--text-2);
 }
 
+.institution--uni {
+  color: var(--text-3);
+  font-size: 0.82rem;
+  margin-top: 0.15rem;
+}
+
 .bio {
   margin: 0 0 2.25rem;
   font-size: 0.95rem;
