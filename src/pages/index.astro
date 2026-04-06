@@ -27,6 +27,27 @@ function formatDate(date: Date) {
   return date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
 }
 
+const codeAlongItems = [
+  {
+    title: 'Kubernetes for HPC & Bioinformatics',
+    type: 'Guide',
+    desc: 'A 13-phase guide for researchers moving from Slurm/HPC to Kubernetes — workloads, storage, GPU scheduling, Nextflow, and Kubeflow.',
+    href: 'https://github.com/j-p-courneya/k8s-mastery-guide',
+  },
+  {
+    title: 'Reproducible Computational Workflows',
+    type: 'Tutorial',
+    desc: 'Building reproducibility layer by layer — Miniconda, Jupyter Lab, Snakemake, Docker, and Git working together.',
+    href: 'https://github.com/j-p-courneya/reproducibilityTutorial',
+  },
+  {
+    title: 'R for Bioinformatics',
+    type: 'Workshop',
+    desc: 'An introduction to R and RStudio for bioinformatics researchers — foundational programming skills applied to biological data.',
+    href: 'https://github.com/j-p-courneya/R-Bioinformatics',
+  },
+];
+
 const workItems = [
   { title: 'Pipeline Development', desc: 'Design and build reproducible multi-omics pipelines on HPC infrastructure.' },
   { title: 'Data Analysis',        desc: 'Single-cell, spatial, genomics, and proteomics analysis support.' },
@@ -52,7 +73,8 @@ const workItems = [
       <div class="identity">
         <h1>{profile.displayName}</h1>
         <p class="role">{profile.jobTitle}</p>
-        <p class="institution">{profile.institution} &middot; {profile.university}</p>
+        <p class="institution">{profile.institution}</p>
+        <p class="institution institution--uni">{profile.university}</p>
       </div>
 
       <p class="bio">{profile.bio}</p>
@@ -112,6 +134,26 @@ const workItems = [
         </div>
       </section>
     )}
+
+    <!-- Code Along -->
+    <section class="section" id="code-along">
+      <div class="section-inner">
+        <div class="section-header">
+          <h2 class="section-heading">Code Along</h2>
+        </div>
+        <p class="section-intro">Hands-on materials you can work through at your own pace — guides, workshops, and tutorials built from real research problems.</p>
+        <div class="ca-grid">
+          {codeAlongItems.map((item) => (
+            <a href={item.href} class="ca-card" target="_blank" rel="noopener noreferrer">
+              <span class="ca-type">{item.type}</span>
+              <span class="ca-title">{item.title}</span>
+              <p class="ca-desc">{item.desc}</p>
+              <span class="ca-link">View on GitHub →</span>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
 
     <!-- Work Together -->
     <section class="section" id="work">

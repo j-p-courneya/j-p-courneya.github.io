@@ -217,6 +217,12 @@ h1 {
   color: var(--text-2);
 }
 
+.institution--uni {
+  color: var(--text-3);
+  font-size: 0.82rem;
+  margin-top: 0.15rem;
+}
+
 .bio {
   margin: 0 0 2.25rem;
   font-size: 0.95rem;
@@ -352,6 +358,60 @@ h1 {
   color: var(--text-2);
   line-height: 1.6;
 }
+
+/* ─── Code Along cards ───────────────────────────────────── */
+.ca-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 0.75rem;
+}
+
+.ca-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  padding: 1.25rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  text-decoration: none;
+  transition: border-color 0.2s;
+}
+
+.ca-card:hover { border-color: var(--accent); }
+
+.ca-type {
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.ca-title {
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: var(--text);
+  line-height: 1.3;
+}
+
+.ca-desc {
+  margin: 0;
+  font-size: 0.82rem;
+  font-weight: 300;
+  color: var(--text-2);
+  line-height: 1.6;
+  flex: 1;
+}
+
+.ca-link {
+  margin-top: 0.5rem;
+  font-size: 0.78rem;
+  color: var(--text-3);
+  transition: color 0.15s;
+}
+
+.ca-card:hover .ca-link { color: var(--accent); }
 
 /* ─── Work Together ──────────────────────────────────────── */
 .work-grid {
