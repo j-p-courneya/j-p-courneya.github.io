@@ -244,10 +244,10 @@ h1 {
   align-items: center;
   gap: 0.4rem;
   padding: 0.45rem 1rem;
-  border: 1px solid var(--border);
+  border: 1px solid color-mix(in srgb, var(--link-color, var(--border)) 40%, transparent);
   border-radius: 100px;
-  background: transparent;
-  color: var(--text-2);
+  background: color-mix(in srgb, var(--link-color, transparent) 7%, transparent);
+  color: var(--link-color, var(--text-2));
   text-decoration: none;
   font-size: 0.82rem;
   font-weight: 400;
@@ -255,15 +255,14 @@ h1 {
 }
 
 .link:hover {
-  border-color: var(--accent);
-  color: var(--accent);
-  background: var(--accent-dim);
+  border-color: var(--link-color, var(--accent));
+  background: color-mix(in srgb, var(--link-color, var(--accent)) 16%, transparent);
 }
 
 .link-icon {
   width: 13px; height: 13px;
   display: flex; align-items: center;
-  flex-shrink: 0; opacity: 0.75;
+  flex-shrink: 0; opacity: 0.85;
 }
 .link-icon svg { width: 100%; height: 100%; }
 
