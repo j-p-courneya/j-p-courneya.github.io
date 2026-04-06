@@ -57,7 +57,12 @@ const profile = {
 
         <!-- Avatar -->
         <div class="avatar" aria-hidden="true">
-          <img src={`https://github.com/${profile.githubUsername}.png`} alt="" class="avatar-img" />
+          <img
+            src={`https://avatars.githubusercontent.com/u/11720131?v=4`}
+            alt=""
+            class="avatar-img"
+            onerror="this.remove()"
+          />
           <span class="avatar-initials">JPC</span>
         </div>
 
