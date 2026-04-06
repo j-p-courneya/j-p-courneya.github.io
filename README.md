@@ -1,6 +1,6 @@
 # Jean-Paul Courneya
 
-**Lead Bioinformatics Analyst** · Center for Vaccine Development, University of Maryland Baltimore
+**Lead Bioinformatics Analyst** · Center for Vaccine Development, School of Medicine, University of Maryland Baltimore
 
 I build and maintain multi-omics pipelines — spanning genomics, proteomics, and single-cell and spatial transcriptomics — on HPC infrastructure, and support researchers from experimental design through large-scale data analysis. My work spans vaccine research and rare disease registries, with a focus on reproducible workflows and rigorous data practices.
 

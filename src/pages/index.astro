@@ -7,6 +7,7 @@ const profile = {
   email: 'jean-paul.courneya@som.umaryland.edu',
   jobTitle: 'Lead Bioinformatics Analyst',
   institution: 'Center for Vaccine Development',
+  school: 'School of Medicine',
   university: 'University of Maryland, Baltimore',
   githubUsername: 'j-p-courneya',
   bio: `I build and maintain multi-omics pipelines — spanning genomics, proteomics, and single-cell and spatial transcriptomics — at the University of Maryland Baltimore Center for Vaccine Development. My work spans HPC infrastructure, reproducible workflow design, and large-scale biological data analysis, supporting faculty, postdocs, and graduate researchers across vaccine and rare disease research.`,
@@ -86,6 +87,7 @@ const workItems = [
         <h1>{profile.displayName}</h1>
         <p class="role">{profile.jobTitle}</p>
         <p class="institution">{profile.institution}</p>
+        <p class="institution institution--uni">{profile.school}</p>
         <p class="institution institution--uni">{profile.university}</p>
       </div>
 

@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-Astro-based GitHub Pages personal academic profile site for Jean-Paul Courneya — Lead Bioinformatics Analyst at the Center for Vaccine Development, University of Maryland, Baltimore.
+Astro-based GitHub Pages personal academic profile site for Jean-Paul Courneya — Lead Bioinformatics Analyst at the Center for Vaccine Development, School of Medicine, University of Maryland, Baltimore.
 
 Live site: `https://j-p-courneya.github.io`
 
