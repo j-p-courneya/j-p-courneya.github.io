@@ -1,0 +1,61 @@
+---
+const navLinks = [
+  { label: 'About',         href: '/' },
+  { label: 'Notes to File', href: '/notes' },
+  { label: 'Work Together', href: '/#work' },
+];
+---
+
+<header class="nav-bar">
+  <a href="/" class="nav-wordmark">J-P Courneya</a>
+  <button class="nav-hamburger" id="nav-toggle" aria-label="Open menu" aria-expanded="false">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+</header>
+
+<div class="nav-backdrop" id="nav-backdrop"></div>
+
+<nav class="nav-drawer" id="nav-drawer" aria-hidden="true">
+  <button class="nav-close" id="nav-close" aria-label="Close menu">&times;</button>
+  <ul>
+    {navLinks.map((link) => (
+      <li>
+        <a href={link.href} class="nav-link">{link.label}</a>
+      </li>
+    ))}
+  </ul>
+</nav>
+
+<script>
+  const toggle   = document.getElementById('nav-toggle')!;
+  const drawer   = document.getElementById('nav-drawer')!;
+  const backdrop = document.getElementById('nav-backdrop')!;
+  const close    = document.getElementById('nav-close')!;
+
+  function open() {
+    drawer.classList.add('is-open');
+    backdrop.classList.add('is-open');
+    toggle.setAttribute('aria-expanded', 'true');
+    drawer.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeMenu() {
+    drawer.classList.remove('is-open');
+    backdrop.classList.remove('is-open');
+    toggle.setAttribute('aria-expanded', 'false');
+    drawer.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  }
+
+  toggle.addEventListener('click', open);
+  close.addEventListener('click', closeMenu);
+  backdrop.addEventListener('click', closeMenu);
+
+  // Close on nav link click (for anchor links like /#work)
+  drawer.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', closeMenu);
+  });
+</script>

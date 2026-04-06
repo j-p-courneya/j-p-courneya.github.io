@@ -1,0 +1,35 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+export async function getStaticPaths() {
+  const notes = await getCollection('notes', ({ data }) => !data.draft);
+  return notes.map((note) => ({
+    params: { slug: note.slug },
+    props: { note },
+  }));
+}
+
+const { note } = Astro.props;
+const { Content } = await note.render();
+
+function formatDate(date: Date) {
+  return date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+}
+---
+
+<BaseLayout title={`${note.data.title} — J-P Courneya`} description={note.data.description}>
+  <main class="post-page">
+    <div class="post-inner">
+      <a href="/notes" class="back-link">← Notes to File</a>
+      <header class="post-header">
+        <time class="post-date">{formatDate(note.data.date)}</time>
+        <h1 class="post-title">{note.data.title}</h1>
+        <p class="post-description">{note.data.description}</p>
+      </header>
+      <div class="post-body">
+        <Content />
+      </div>
+    </div>
+  </main>
+</BaseLayout>
