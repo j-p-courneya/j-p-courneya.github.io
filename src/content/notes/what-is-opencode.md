@@ -9,3 +9,25 @@ Have you heard about Open Code? Did I spell that right? it might be one word I'm
 
 -----
 
+## What OpenCode Actually Is
+
+OpenCode is a free, open-source (MIT license) AI coding agent built for the terminal. It runs as a persistent background server and connects via a TUI — a terminal UI with panels, a sidebar, and session management. Sessions survive disconnects and SSH drops; you reconnect and pick up exactly where you left off.
+
+### The Model Freedom Thing
+
+This is OpenCode's defining characteristic. It supports 75+ model providers — Anthropic, OpenAI, Google Gemini, Mistral, local models via Ollama, and more. You bring your own API key (BYOK) for any of them. This is the core tradeoff: Claude Code locks you into Anthropic's ecosystem and bills you for every token. OpenCode lets you route to whatever model fits the task and your budget, or run entirely offline with a local model at zero cost.
+
+OpenCode Zen is their curated tier — a handpicked set of models they've benchmarked specifically for coding agents, removing the guesswork about which provider performs reliably.
+
+### How It Works
+
+- **TUI mode** — terminal-native, keyboard-driven, works over SSH, runs anywhere
+- **Desktop app** — Mac-only as of early 2026; feels closer to a lightweight IDE with a file explorer and editor panels
+- **Agent system** — you can configure specialized agents with custom prompts, model assignments, and scoped tool access for specific workflows
+- **MCP support** — implements the Model Context Protocol, letting the agent connect to external tools and services in a standardized way
+
+### The Honest Tradeoff
+
+Claude Code is more polished — better at multi-step planning, cleaner context handling, less babysitting required. OpenCode gets close, especially on end-to-end tasks, but the gap exists. What OpenCode gives you in return is provider independence, local model support for air-gapped or confidential codebases, and a cost structure you control. The tool itself is free. You pay only for the inference you actually use.
+
+For a personal or research budget trying to stay under $20/month, that flexibility is the whole argument.
