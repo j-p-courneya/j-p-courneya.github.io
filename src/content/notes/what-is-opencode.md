@@ -1,5 +1,5 @@
 ---
-title: "What is Opencode"
+title: "What is OpenCode?
 date: 2026-04-08
 description: "Writing about open code"
 draft: false
