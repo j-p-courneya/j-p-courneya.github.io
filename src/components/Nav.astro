@@ -1,9 +1,9 @@
 ---
 const navLinks = [
   { label: 'About',         href: '/' },
+  { label: 'Projects',      href: '/#projects' },
   { label: 'Notes to File', href: '/notes' },
-  { label: 'Code Along',   href: '/#code-along' },
-  { label: 'Work Together', href: '/#work' },
+  { label: 'Code Along',    href: '/#code-along' },
 ];
 ---
 
@@ -55,7 +55,7 @@ const navLinks = [
   close.addEventListener('click', closeMenu);
   backdrop.addEventListener('click', closeMenu);
 
-  // Close on nav link click (for anchor links like /#work)
+  // Close on nav link click (for anchor links like /#projects)
   drawer.querySelectorAll('.nav-link').forEach(link => {
     link.addEventListener('click', closeMenu);
   });

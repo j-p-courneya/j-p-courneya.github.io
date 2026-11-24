@@ -4,17 +4,18 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 const profile = {
   displayName: 'J-P Courneya',
-  email: 'jean-paul.courneya@som.umaryland.edu',
+  email: 'jpcourneya@protonmail.com',
   jobTitle: 'Lead Bioinformatics Analyst',
   institution: 'Center for Vaccine Development',
   school: 'School of Medicine',
   university: 'University of Maryland, Baltimore',
   githubUsername: 'j-p-courneya',
-  bio: `I build and maintain multi-omics pipelines — spanning genomics, proteomics, and single-cell and spatial transcriptomics — at the University of Maryland Baltimore Center for Vaccine Development. My work spans HPC infrastructure, reproducible workflow design, and large-scale biological data analysis, supporting faculty, postdocs, and graduate researchers across vaccine and rare disease research.`,
+  bio: `I've spent 20 years in life-science research, from translational wet-lab studies and a genomics core to building research computing services. At the Center for Vaccine Development I lead genomic and multi-omic analysis for malaria, mosquito vector, vaccine, and transplant immunology projects. I run GPU and HPC infrastructure for the group, maintain a self-hosted language model and retrieval stack, and study genome language models. I'm a Carpentries instructor and Nextflow Ambassador, and I teach everything from 10-person hands-on sessions to talks for 100+ researchers.`,
   links: [
-    { label: 'Email',         href: 'mailto:jean-paul.courneya@som.umaryland.edu', icon: 'email',   color: '#c4714f' },
+    { label: 'Email',         href: 'mailto:jpcourneya@protonmail.com',             icon: 'email',   color: '#c4714f' },
+    { label: 'Resume',        href: '/Courneya_Resume.pdf',                         icon: 'resume',  color: '#e0b860' },
     { label: 'GitHub',        href: 'https://github.com/j-p-courneya',             icon: 'github',  color: '#7da4cf' },
-    { label: 'Google Scholar',href: 'https://share.google/SJgdEvhAVGnKd6ZpD',      icon: 'scholar', color: '#6db890' },
+    { label: 'Google Scholar',href: 'https://scholar.google.com/citations?user=7C02WsYAAAAJ',      icon: 'scholar', color: '#6db890' },
     { label: 'ORCID',         href: 'https://orcid.org/0000-0001-9014-649X',       icon: 'orcid',   color: '#a5c65a' },
     { label: 'LinkedIn',      href: 'https://www.linkedin.com/in/jean-paul-courneya-65721715', icon: 'linkedin', color: '#5b9ed6' },
   ],
@@ -27,6 +28,39 @@ const recentNotes = (await getCollection('notes', ({ data }) => !data.draft))
 function formatDate(date: Date) {
   return date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
 }
+
+const projectItems = [
+  {
+    title: 'Self-Hosted LLM and RAG Stack',
+    type: 'AI Infrastructure',
+    desc: 'A self-hosted language model, retrieval (RAG), and MCP stack running on SLURM GPU nodes for the CVD bioinformatics group.',
+    href: null,
+  },
+  {
+    title: 'OmicIDX MCP',
+    type: 'MCP Server',
+    desc: "Lets an LLM search public SRA and GEO sequencing metadata through OmicIDX, alongside the lab's own dataset catalog.",
+    href: null,
+  },
+  {
+    title: 'NIH DMSP Skill',
+    type: 'Open Source',
+    desc: 'A Claude skill that drafts NIH Data Management and Sharing Plans in the 2026 NIH format, from the checkboxes to the data table.',
+    href: 'https://github.com/j-p-courneya/nih-dmsp-skill',
+  },
+  {
+    title: 'snp_call_nf Training',
+    type: 'Nextflow Course',
+    desc: 'A custom Nextflow course built on the snp_call_nf Plasmodium variant-calling pipeline, taught to collaborators in Mali.',
+    href: 'https://github.com/j-p-courneya/snp_call_nf_training',
+  },
+  {
+    title: 'Skeleton Poser',
+    type: 'Three.js App',
+    desc: 'A browser app for posing 3D skeletons and exporting clean art for my screen-printed shirt designs.',
+    href: 'https://github.com/j-p-courneya/skeleton-poser',
+  },
+];
 
 const codeAlongItems = [
   {
@@ -61,12 +95,6 @@ const codeAlongItems = [
   },
 ];
 
-const workItems = [
-  { title: 'Pipeline Development', desc: 'Design and build reproducible multi-omics pipelines on HPC infrastructure.' },
-  { title: 'Data Analysis',        desc: 'Single-cell, spatial, genomics, and proteomics analysis support.' },
-  { title: 'Teaching & Speaking',  desc: 'Workshops, training sessions, and talks on bioinformatics tools and workflows.' },
-  { title: 'Research Collaboration', desc: 'Partnering with labs and institutions on computational biology projects.' },
-];
 ---
 
 <BaseLayout title="J-P Courneya" description={`${profile.displayName} — ${profile.jobTitle}, ${profile.university}`}>
@@ -106,6 +134,9 @@ const workItems = [
               {link.icon === 'email' && (
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
               )}
+              {link.icon === 'resume' && (
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14,2 14,8 20,8"/><line x1="8" y1="13" x2="16" y2="13"/><line x1="8" y1="17" x2="13" y2="17"/></svg>
+              )}
               {link.icon === 'github' && (
                 <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
               )}
@@ -123,6 +154,33 @@ const workItems = [
           </a>
         ))}
       </nav>
+    </section>
+
+    <!-- Projects -->
+    <section class="section" id="projects">
+      <div class="section-inner">
+        <div class="section-header">
+          <h2 class="section-heading">Projects</h2>
+        </div>
+        <p class="section-intro">Tools and infrastructure I've built, from GPU-backed AI services to training courses and side projects.</p>
+        <div class="ca-grid">
+          {projectItems.map((item) => item.href ? (
+            <a href={item.href} class="ca-card" target="_blank" rel="noopener noreferrer">
+              <span class="ca-type">{item.type}</span>
+              <span class="ca-title">{item.title}</span>
+              <p class="ca-desc">{item.desc}</p>
+              <span class="ca-link">View on GitHub →</span>
+            </a>
+          ) : (
+            <div class="ca-card ca-card--static">
+              <span class="ca-type">{item.type}</span>
+              <span class="ca-title">{item.title}</span>
+              <p class="ca-desc">{item.desc}</p>
+              <span class="ca-link ca-link--muted">Internal project</span>
+            </div>
+          ))}
+        </div>
+      </div>
     </section>
 
     <!-- Notes to File preview -->
@@ -170,26 +228,6 @@ const workItems = [
       </div>
     </section>
 
-    <!-- Work Together -->
-    <section class="section" id="work">
-      <div class="section-inner">
-        <div class="section-header">
-          <h2 class="section-heading">Work Together</h2>
-        </div>
-        <p class="section-intro">I'm open to collaboration and consulting across a range of bioinformatics and computational biology work.</p>
-        <div class="work-grid">
-          {workItems.map((item) => (
-            <div class="work-item">
-              <div class="work-item-title">{item.title}</div>
-              <p class="work-item-desc">{item.desc}</p>
-            </div>
-          ))}
-        </div>
-        <p class="work-cta">
-          Get in touch at <a href="mailto:jean-paul.courneya@som.umaryland.edu">jean-paul.courneya@som.umaryland.edu</a>
-        </p>
-      </div>
-    </section>
   </main>
 
 </BaseLayout>

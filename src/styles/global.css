@@ -412,51 +412,9 @@ h1 {
 
 .ca-card:hover .ca-link { color: var(--accent); }
 
-/* ─── Work Together ──────────────────────────────────────── */
-.work-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0.75rem;
-  margin-bottom: 2rem;
-}
-
-@media (max-width: 520px) {
-  .work-grid { grid-template-columns: 1fr; }
-}
-
-.work-item {
-  padding: 1.1rem 1.25rem;
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: 8px;
-}
-
-.work-item-title {
-  font-size: 0.88rem;
-  font-weight: 500;
-  color: var(--text);
-  margin-bottom: 0.35rem;
-}
-
-.work-item-desc {
-  margin: 0;
-  font-size: 0.82rem;
-  font-weight: 300;
-  color: var(--text-2);
-  line-height: 1.6;
-}
-
-.work-cta {
-  font-size: 0.88rem;
-  color: var(--text-2);
-  font-weight: 300;
-}
-
-.work-cta a {
-  color: var(--accent);
-  text-decoration: none;
-}
-.work-cta a:hover { text-decoration: underline; }
+.ca-card--static:hover { border-color: var(--border); }
+.ca-card--static:hover .ca-link,
+.ca-link--muted { color: var(--text-3); font-style: italic; }
 
 /* ─── Notes listing page ─────────────────────────────────── */
 .notes-page {
