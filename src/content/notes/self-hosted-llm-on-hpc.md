@@ -1,6 +1,6 @@
 ---
 title: "Running a Self-Hosted LLM on an Academic SLURM Cluster"
-date: 2026-11-24
+date: 2026-11-22
 description: "What it took to serve a language model, embeddings, and retrieval for my group on shared V100 nodes."
 draft: true
 ---

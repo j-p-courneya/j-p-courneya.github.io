@@ -1,6 +1,6 @@
 ---
 title: "Skeleton Poser: Building a Tool for My Own Shirt Designs"
-date: 2026-11-24
+date: 2026-11-18
 description: "A Three.js app for posing 3D skeletons and exporting clean art for screen printing."
 draft: true
 ---

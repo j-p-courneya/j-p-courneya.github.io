@@ -1,6 +1,6 @@
 ---
 title: "A Claude Skill for NIH Data Management and Sharing Plans"
-date: 2026-11-24
+date: 2026-09-26
 description: "Why I rebuilt my open-source DMSP skill to mirror the new 2026 NIH format page."
 draft: true
 ---

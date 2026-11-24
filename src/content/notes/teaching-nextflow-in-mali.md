@@ -1,6 +1,6 @@
 ---
 title: "Teaching Nextflow to Collaborators in Mali"
-date: 2026-11-24
+date: 2026-10-23
 description: "Lessons from a three-hour, Zoom-based Nextflow course on a collaborator's server with no working scheduler."
 draft: true
 ---

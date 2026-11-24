@@ -1,6 +1,6 @@
 ---
 title: "Adding a DNA Mode to RustQC"
-date: 2026-11-24
+date: 2026-11-13
 description: "Extending a fast Rust QC tool to cover the DNA sequencing work our core actually runs."
 draft: true
 ---

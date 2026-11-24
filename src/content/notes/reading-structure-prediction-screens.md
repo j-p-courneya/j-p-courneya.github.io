@@ -1,6 +1,6 @@
 ---
 title: "Reading a Structure Prediction Screen Without Fooling Yourself"
-date: 2026-11-24
+date: 2026-10-16
 description: "Why a promising interface score turned out to be an artifact of how the constructs were built."
 draft: true
 ---

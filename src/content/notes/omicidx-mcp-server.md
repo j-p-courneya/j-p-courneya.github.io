@@ -1,6 +1,6 @@
 ---
 title: "Building an MCP Server for Sequencing Metadata"
-date: 2026-11-24
+date: 2026-11-07
 description: "Letting a language model search SRA and GEO through OmicIDX, alongside a catalog of our own lab's datasets."
 draft: true
 ---
