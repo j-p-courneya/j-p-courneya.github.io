@@ -21,7 +21,7 @@ const profile = {
   ],
 };
 
-const recentNotes = (await getCollection('notes', ({ data }) => !data.draft))
+const recentNotes = (await getCollection('notes', ({ data }) => import.meta.env.DEV || !data.draft))
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
   .slice(0, 2);
 

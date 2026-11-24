@@ -2,7 +2,7 @@
 import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 
-const allNotes = await getCollection('notes', ({ data }) => !data.draft);
+const allNotes = await getCollection('notes', ({ data }) => import.meta.env.DEV || !data.draft);
 const notes = allNotes.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
 
 function formatDate(date: Date) {
@@ -22,7 +22,7 @@ function formatDate(date: Date) {
       {notes.map((note) => (
         <li>
           <a href={`/notes/${note.slug}`} class="note-card">
-            <div class="note-card-meta">{formatDate(note.data.date)}</div>
+            <div class="note-card-meta">{note.data.draft && <span class="draft-badge">Draft</span>}{formatDate(note.data.date)}</div>
             <div class="note-card-title">{note.data.title}</div>
             <div class="note-card-desc">{note.data.description}</div>
             <div class="note-card-read">Read →</div>

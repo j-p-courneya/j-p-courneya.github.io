@@ -516,3 +516,16 @@ h1 {
   transition: color 0.15s;
 }
 .back-link:hover { color: var(--accent); }
+
+/* Draft label, visible only in local dev (drafts are excluded from production builds) */
+.draft-badge {
+  display: inline-block;
+  margin-right: 0.6rem;
+  padding: 0.05rem 0.45rem;
+  border: 1px solid var(--accent);
+  border-radius: 4px;
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
